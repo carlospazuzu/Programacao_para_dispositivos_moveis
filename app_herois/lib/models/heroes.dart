@@ -12,10 +12,20 @@ class HeroesModel {
     'SuperMan',
     'QuickSilver',
     'Captain America',
-    'Black Widow'
+    'Black Widow',
+    'Rogue',
+    'Dr. Strange',
+    'Ant-Man',
+    'Scarlet Witch',
+    'Drax',
+    'Gamora',
+    'Green Lantern',
+    'The Flash',
+    'Aquaman',
+    'Shazam'
   ];
 
-  Item getById(int id) => Item(id, heroes[id]);
+  Item getById(int id) => Item(id, heroes[id % heroes.length]);
 
   Item getByPosition(int position) {
     return getById(position);

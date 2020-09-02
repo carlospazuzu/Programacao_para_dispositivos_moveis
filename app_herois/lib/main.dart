@@ -3,6 +3,7 @@ import 'package:app_herois/models/heroes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:app_herois/screens/heroeslist.dart';
+import 'package:app_herois/screens/favoritespage.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (context) => HeroesListScreen(),
+          '/favorites': (context) => FavoritesPage()
         },
       ),
     );

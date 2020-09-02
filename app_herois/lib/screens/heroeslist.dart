@@ -42,6 +42,10 @@ class _HeroesList extends StatelessWidget {
         maxHeight: 48,        
         child: Row(
           children: [
+            AspectRatio(
+              aspectRatio: 1,
+              child: Icon(Icons.person_outline),
+            ),
             Expanded(
               child: Text(item.name)
             ),
@@ -74,7 +78,7 @@ class _AddButton extends StatelessWidget {
           favorite.add(item);
         },
       splashColor: Colors.yellow,
-      child: isFavorited ? Icon(Icons.check, semanticLabel: 'ADDED') : Text('ADD')
+      child: isFavorited ? Icon(Icons.favorite, color: Colors.red,) : Icon(Icons.favorite_border,)
     );
   }
 }
@@ -88,7 +92,7 @@ class HeroAppBar extends StatelessWidget {
       actions: [
         IconButton(
           icon: Icon(Icons.favorite),
-          onPressed: () => Navigator.pushNamed(context, 'favorites'),
+          onPressed: () => Navigator.pushNamed(context, '/favorites'),
         )
       ],
     );
